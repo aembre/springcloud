@@ -1,0 +1,11 @@
+server:
+  port: 8087
+#客户端的spring.application.name配置config-clent是和Git服务器上面的文件名相对应的
+spring:
+  application:
+    name: config-client
+  cloud:
+    config:
+      label: master #指定git分支
+      profile: dev
+      uri: http://localhost:8086/
